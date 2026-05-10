@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>NetStream</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+</head>
+
+<body>
+<!-- SPLASH SCREEN -->
+
+<div id="splash">
+
+<div class="splashLogo">
+
+
+
+</div>
+
+<h1>NETSTREAM</h1>
+
+</div>
+<!-- AD SCREEN -->
+
+<div id="adScreen">
+
+<div class="adBox">
+
+<div class="logoBox">
+
+N
+
+</div>
+
+<h1>NETSTREAM</h1>
+
+<p>Watch one ad to continue</p>
+
+<button onclick="openApp()">
+
+Continue
+
+</button>
+
+</div>
+
+</div>
+
+<!-- MAIN APP -->
+
+<div id="mainApp">
+
+<header>
+
+<div class="logo">
+
+NETSTREAM
+
+</div>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search Movies">
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="overlay"></div>
+
+<div class="heroContent">
+
+<h1 id="heroTitle">Loading...</h1>
+
+<p id="heroDesc">Trending now on NetStream</p>
+
+<button onclick="watchMovie()">▶ Watch Now</button>
+
+</div>
+
+</section>
+
+
+
+</div>
+
+</section>
+
+
+
+</div>
+
+</section>
+<div class="categories">
+
+<button onclick="loadTrending()">Trending</button>
+
+<button onclick="loadByCategory(28)">Action</button>
+
+<button onclick="loadByCategory(35)">Comedy</button>
+
+<button onclick="loadByCategory(27)">Horror</button>
+
+<button onclick="loadByCategory(10749)">Romance</button>
+
+</div>
+
+<!-- MOVIES -->
+
+<section class="movies">
+
+<h2>Trending</h2>
+<section class="movies">
+
+<h2>
+
+Continue Watching
+
+</h2>
+
+<div class="movieRow">
+
+<div class="movieCard">
+
+<div class="movieInfo">
+
+<h3 id="continueMovie">
+
+No movie yet
+
+</h3>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<div class="movieRow">
+
+</div>
+
+<!-- CARD -->
+
+<div class="movieCard">
+
+<img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba">
+
+<div class="movieInfo">
+
+<h3>Action Movie</h3>
+
+<button onclick="playMovie(
+'https://www.w3schools.com/html/mov_bbb.mp4'
+)">
+
+Play
+
+</button>
+
+</div>
+
+</div>
+
+<!-- CARD -->
+
+<div class="movieCard">
+
+<img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c">
+
+<div class="movieInfo">
+
+<h3>Drama Movie</h3>
+
+<button onclick="playMovie(
+'https://www.w3schools.com/html/movie.mp4'
+)">
+
+Play
+
+</button>
+
+</div>
+
+</div>
+
+<!-- CARD -->
+
+<div class="movieCard">
+
+<img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1">
+
+<div class="movieInfo">
+
+<h3>Sci-Fi Movie</h3>
+
+<button onclick="playMovie(
+'https://www.w3schools.com/html/mov_bbb.mp4'
+)">
+
+Play
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- BOTTOM NAVIGATION -->
+
+<div class="bottomNav">
+
+<div class="navItem active">
+
+🏠
+
+<p>Home</p>
+
+</div>
+
+<div class="navItem">
+
+🎬
+
+<p>Movies</p>
+
+</div>
+
+<div class="navItem">
+🔥
+<p>Trending</p>
+<section class="movies">
+</div>
+
+<div class="navItem">
+
+⚙️
+
+<p>Settings</p>
+
+</div>
+
+</div>
+</div>
+
+<!-- VIDEO PLAYER -->
+
+<div id="player">
+
+<span id="closeBtn"
+onclick="closePlayer()">
+
+×
+
+</span>
+
+<video id="video"
+controls>
+
+<source id="videoSource">
+
+</video>
+
+</div>
+<!-- DETAILS POPUP -->
+
+<div id="detailsPopup">
+
+<div class="popupBox">
+
+<span onclick="closeDetails()">
+
+×
+
+</span>
+
+<img id="popupImage">
+
+<h2 id="popupTitle"></h2>
+
+<p id="popupOverview"></p>
+
+<button onclick="watchMovie()">
+
+Watch
+
+</button>
+
+<button onclick="downloadMovie()">
+
+Download
+
+</button>
+
+</div>
+
+</div>
+<script src="app.js"></script>
+
+</body>
+
+</html>
+<link rel="manifest" href="manifest.json">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000">
+<div class="navItem" onclick="showFavorites()">
+❤️
+<p>Fav</p>
+</div>
